@@ -41,43 +41,44 @@ weather(randomKg: "Ош")
 //
 //275с + скидка 13,75c
 //Итого: 261,25с
-//
+ 
+print("Здравствуйте, чего бы вы хотели?")
+let pr1 = 50
+let pr2 = 65
+let pr3 = 40
+let pr4 = 20
+let pr5 = 100
+
+ 
+func product(prs: String) {
+    switch prs {
+    case "Кола":
+        print("Кола стоит 50 сом")
+    case "Кефир":
+        print("Кефир стоит 65 сом")
+    case "Молоко":
+        print("Молоко стоит 40 сом")
+    case "Хлеб":
+        print("Хлеб стоит 20 сом")
+    case "Салат":
+        print("Салат стоит 100 сом")
+    default:
+        print("Нет в наличии")
+    }
+}
+product(prs: "Кола")
+product(prs: "Кефир")
+product(prs: "Молоко")
+product(prs: "Хлеб")
+product(prs: "Салат")
+let res_pl = (pr1 + pr2 + pr3 + pr4 + pr5)
+let sale = res_pl / 100 * 5
+let fullRes = res_pl - sale
+
+print("Ваш итог без скидки: \(res_pl) сом")
+print("Ваш итог со скидкой: \(fullRes) сом")
 //доп. Доработать калькулятор с прошлого урока с помощью условных операторов и соединить всё с readLine (например сначала спрашиваете число, после чего “Какое действие совершить?”, затем второе число и т.д ) И в итоге выдать итоговый результат используя заранее подготовленные функции для вычислений
 
-var fst = Int.random(in: 0..<100)
-var snd = Int.random(in: 0..<100)
-print("Введите ваше число - \(fst)")
-
-print("Какое действие совершить? - умножение")
-
-print("Введите ваше второе число - \(snd)")
-func calc_mp(f: Int, s: Int) -> Int{
-    return  f * s
-}
-print(calc_mp(f: fst, s: snd))
-var fst_min = Int.random(in: 0..<100)
-var snd_min = Int.random(in: 0..<100)
-print("Введите ваше число - \(fst_min)")
-
-print("Какое действие совершить? - вычитание")
-
-print("Введите ваше второе число - \(snd_min)")
-func calc_min(f: Int, s: Int) -> Int{
-    return  f - s
-}
-print(calc_min(f: fst_min, s: snd_min))
-
-var fst_pl = Int.random(in: 0..<100)
-var snd_pl = Int.random(in: 0..<100)
-print("Введите ваше число - \(fst_pl)")
-
-print("Какое действие совершить? - сложение")
-
-print("Введите ваше второе число - \(snd_pl)")
-func calc_pl(f: Int, s: Int) -> Int{
-    return  f + s
-}
-print(calc_pl(f: fst_pl, s: snd_pl))
 
 //Критерии приемки:
 //Код каждого студента должен быть уникальным
