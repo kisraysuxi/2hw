@@ -77,7 +77,39 @@ let fullRes = res_pl - sale
 
 print("Ваш итог без скидки: \(res_pl) сом")
 print("Ваш итог со скидкой: \(fullRes) сом")
+
 //доп. Доработать калькулятор с прошлого урока с помощью условных операторов и соединить всё с readLine (например сначала спрашиваете число, после чего “Какое действие совершить?”, затем второе число и т.д ) И в итоге выдать итоговый результат используя заранее подготовленные функции для вычислений
+print("Введите ваше первое число")
+var fst = Int.random(in: 0...100)
+print(fst)
+print("Введите ваше второе число")
+var snd = Int.random(in: 0...100)
+print(snd)
+
+func calc_mp(f: Int, s: Int) -> Int{
+    print("Итог:")
+    return  f * s
+}
+print(calc_mp(f: fst, s: snd))
+
+func calc_min(f: Int, s: Int) -> Int{
+    print("Итог:")
+    return  f - s
+}
+print(calc_min(f: fst, s: snd))
+
+func calc_pl(f: Int, s: Int) -> Int{
+    print("Итог:")
+    return  f + s
+}
+print(calc_pl(f: fst, s: snd))
+
+func calc_de(f: Int, s: Int) -> Int{
+    print("Итог:")
+    return  f / s
+}
+print(calc_de(f: snd, s: fst))
+
 
 
 //Критерии приемки:
